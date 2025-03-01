@@ -49,13 +49,7 @@
 }
 
 @layer components {
-  .pattern {
-    @apply bg-hero-pattern w-screen h-screen bg-center bg-cover absolute z-0;
-  }
 
-  .wrapper {
-    @apply px-5 py-12 xs:p-10 max-w-7xl mx-auto flex flex-col relative z-10;
-  }
 
   .trending {
     @apply mt-20;
@@ -93,57 +87,13 @@
     }
   }
 
-  .all-movies {
-    @apply space-y-9;
 
-    & ul {
-      @apply grid grid-cols-1 gap-5 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4;
-    }
-  }
 
-  .movie-card {
-    @apply bg-dark-100 p-5 rounded-2xl shadow-inner shadow-light-100/10;
 
-    & img {
-      @apply rounded-lg h-auto w-full;
-    }
-
-    & h3 {
-      @apply text-white font-bold text-base line-clamp-1;
-    }
-
-    & .content {
-      @apply mt-2 flex flex-row items-center flex-wrap gap-2;
-    }
-
-    & .rating {
-      @apply flex flex-row items-center gap-1;
-    }
-
-    & .rating img {
-      @apply size-4 object-contain;
-    }
-
-    & .rating p {
-      @apply font-bold text-base text-white;
-    }
-
-    & .content span {
-      @apply text-sm text-gray-100;
-    }
-
-    & .content .lang {
-      @apply capitalize text-gray-100 font-medium text-base;
-    }
-
-    & .content .year {
-      @apply text-gray-100 font-medium text-base;
-    }
-  }
 }
 
 @utility text-gradient {
-  @apply bg-linear-to-r from-[#D6C7FF] to-[#AB8BFF];
+  @apply bg-linear-to-r from-[#D6C7FF] to-[#AB8BFF] bg-clip-text text-transparent;
 }
 
 @utility fancy-text {
