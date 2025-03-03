@@ -1,8 +1,16 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const MovieCard = ({ movie: { id, title, vote_average, poster_path, release_date, original_language } }) => {
     return (
-        <div className="bg-dark-100 p-5 rounded-2xl shadow-inner shadow-light-100/10">
+        <motion.div
+            className="bg-dark-100 p-5 rounded-2xl shadow-inner shadow-light-100/10 cursor-pointer"
+            whileHover={{
+                scale: 1.1,
+                boxShadow: "0px 10px 20px rgba(255, 255, 255, 0.15)",
+            }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+        >
             <Link to={`/movie/${id}`}>
                 <img
                     src={poster_path ? `https://image.tmdb.org/t/p/w500/${poster_path}` : "/no-movie.png"}
@@ -27,7 +35,7 @@ const MovieCard = ({ movie: { id, title, vote_average, poster_path, release_date
                     </p>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
