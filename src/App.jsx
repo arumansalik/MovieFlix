@@ -6,6 +6,7 @@ import MovieCard from "./components/MovieCard";
 import Search from "./components/Search";
 import Spinner from "./components/Spinner";
 import MovieDetails from "./components/MovieDetails";
+import { Spotlight } from "./components/ui/spotlight-new";
 
 const API_BASE_URL = "https://api.themoviedb.org/3";
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
@@ -90,6 +91,7 @@ const App = () => {
               element={
                 <main>
                   <div className="bg-hero-pattern w-screen h-screen bg-center bg-cover absolute z-0" />
+                  <Spotlight />
                   <div className="px-5 py-12 xs:p-10 max-w-7xl mx-auto flex flex-col relative z-10">
                     <header>
                       <img src="./hero.png" alt="Hero Banner" />
